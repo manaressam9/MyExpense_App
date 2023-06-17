@@ -39,7 +39,7 @@ exports.deleteIncome = async(req, res) => {
     console.log(req.params)
     IncomeSchema.findByIdAndDelete(id)
     .then( income => {
-        res.status(200).json({message: 'income deleted'})
+        res.status(200).json({message: 'expense deleted'})
     })
     .catch(e => { res.status(500).json({message: e.message})})
    
@@ -52,6 +52,6 @@ exports.getIncomes = async(req, res) => {
         const incomes = await IncomeSchema.find().sort({createdAt: -1})
         res.status(200).json(incomes)
     } catch (error) {
-        res.status(500).json({message: e.message})
+        res.status(500).json({message: error.message})
     }
 }
