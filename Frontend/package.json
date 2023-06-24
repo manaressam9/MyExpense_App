@@ -32,6 +32,7 @@
     "react-datepicker": "^4.14.1",
     "react-dom": "^18.2.0",
     "style-loader": "^3.3.3",
-    "styled-components": "^5.3.11"
+    "styled-components": "^5.3.11",
+    "url-loader": "^4.1.1"
   }
 }
