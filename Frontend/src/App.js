@@ -8,13 +8,17 @@ import Dashboard from "./components/Dashboard";
 import Transactions from "./components/Transactions";
 import Expenses from "./components/Expenses";
 import Income from"./components/Income"
+import { useGlobalContext } from "./context/globalContext";
 const App = () =>{
     const[active, setActive] = useState(1);
+     const global = useGlobalContext();
+     console.log(global)
     //to avoid restarting the animation when rerendering as a result of changing active state
     // note that if we moved ative state in navbar comp we won't need to use useMemo  
     const orbMemo = useMemo(() => {
        return<Orb />
      },[])
+
     //display page content  dynamicaly
     const displayData = ()=>{
      switch(active){
@@ -30,7 +34,7 @@ const App = () =>{
          return<Dashboard />
      }
     }
-
+   
     return (
         <AppStyled className="App" bg={bg}>
            
