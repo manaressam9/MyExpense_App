@@ -35,7 +35,7 @@ margin-top: -37vh;
 background: linear-gradient(180deg, #9032FF 0%, #a700e9 100%);
 filter: blur(200px);
 animation: ${moveOrb} 10s alternate linear infinite;
-
+z-index:0 ;
 `;
     return (
         <OrbStyle></OrbStyle>
