@@ -12,7 +12,7 @@ import { useGlobalContext } from "./context/globalContext";
 const App = () =>{
     const[active, setActive] = useState(1);
      const global = useGlobalContext();
-     console.log(global)
+    // console.log(global)
     //to avoid restarting the animation when rerendering as a result of changing active state
     // note that if we moved ative state in navbar comp we won't need to use useMemo  
     const orbMemo = useMemo(() => {
